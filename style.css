@@ -8,10 +8,18 @@ body {
     overflow: hidden;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h1 {
+    color: white;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .shadow {
@@ -22,14 +30,22 @@ body {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.785);
     box-shadow: 0px 0px 50px 10px rgb(6, 0, 52) inset;
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    height: 90vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
     gap: 20px;
     padding: 40px;
+    overflow: scroll;
 }
 
-.box{
+.box {
     border: 2px solid rgba(255, 255, 255, 0.419);
     box-shadow: 0px 0px 5px 1px white;
     display: flex;
@@ -37,10 +53,57 @@ body {
     align-items: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
-.box:hover{
+
+.box:hover {
     background: rgba(255, 255, 255, 0.33);
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        padding: 40px;
+        overflow: scroll;
+    }
+
+    .box {
+        width: 90%;
+        height: 100px;
+        justify-self: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 17px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+        padding: 40px;
+        overflow: scroll;
+    }
+
+    .box {
+        width: 90%;
+        height: 100px;
+    }
 }
