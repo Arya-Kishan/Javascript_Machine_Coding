@@ -1,52 +1,83 @@
 body {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    height: 100vh;
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .selectColor {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    padding: 10px;
-  }
-  
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;
-    padding: 5px;
-  }
-  
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+  background: url('../images/bg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.785);
+  box-shadow: 0px 0px 50px 10px rgb(6, 0, 52) inset;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 40px;
+  z-index: -1;
+}
+
+
+.selectColor {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 5px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#colorChange {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+@media only screen and (max-width: 600px) {
   .box {
-    width: 100px;
-    height: 100px;
-    border: 2px solid white;
-    border-radius: 10px;
+    width: 50px;
+    height: 50px;
   }
-  
-  #colorChange {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding: 3px;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .box {
-      width: 50px;
-      height: 50px;
-    }
-  }
-  
+}
+
+.github{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  width: 40px;
+  border-radius: 50%;
+}
